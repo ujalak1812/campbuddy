@@ -20,7 +20,7 @@ export default {
       "h-white": "rgba(255, 255, 255, 0.25)",
     },
     backgroundImage: {
-      hero: "url('src/assets/hero-bg.png')",
+      hero: "url('assets/hero-bg.png')",
       gradient:
         "linear-gradient(0deg, rgba(37, 58, 20, 0.6) 0%, rgba(37, 58, 20, 0.00) 100%)",
     },
