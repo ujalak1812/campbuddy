@@ -1,3 +1,27 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  body {
+    @apply font-sans;
+  }
+
+  h1,
+  h2,
+  h5 {
+    @apply font-serif font-bold;
+  }
+
+  h1 {
+    @apply xl:text-6xl sm:text-5xl text-4xl;
+  }
+
+  h2 {
+    @apply xl:text-5xl sm:text-4xl text-3xl;
+  }
+
+  h5 {
+    @apply sm:text-2xl text-xl tracking-wide;
+  }
+}
