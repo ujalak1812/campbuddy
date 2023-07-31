@@ -1,12 +1,12 @@
 const navigation = [
   {
-    id: "campgrounds",
-    text: "Campgrounds",
-    url: "#",
+    id: "home",
+    text: "Home",
+    url: "/",
   },
   {
-    id: "add-campground",
-    text: "Add Campground",
+    id: "campgrounds",
+    text: "Campgrounds",
     url: "#",
   },
   {
