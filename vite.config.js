@@ -12,6 +12,7 @@ export default defineConfig({
       components: "/src/components",
       data: "/src/data",
       layout: "/src/layout",
+      modules: "/src/modules"
     },
   },
 });
