@@ -8,7 +8,7 @@ const Features = () => {
   return (
     <Section
       heading="Unleash your Camping Adventure"
-      classes="bg-grayish-white pr-0"
+      classes="bg-grayish-white"
     >
       <div className="flex flex-col-reverse items-end justify-between lg:flex-row xl:items-center">
         <div className="flex basis-2/4 flex-wrap justify-center gap-14 px-6">
@@ -22,7 +22,14 @@ const Features = () => {
           ))}
         </div>
         <div className="pb-14 sm:pl-0 lg:pb-0 ">
-          <ImageCircle image={FeaturesImage} classes="max-w-562" />
+          <ImageCircle
+            image={FeaturesImage}
+            classes={{
+              container: "-mr-14 w-11/12 sm:-mr-12 sm:w-auto",
+              img: "max-w-562",
+              brownCircle: "bottom-[18%] sm:-left-[12%]",
+            }}
+          />
         </div>
       </div>
     </Section>
