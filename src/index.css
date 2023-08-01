@@ -14,14 +14,14 @@
   }
 
   h1 {
-    @apply xl:text-6xl sm:text-5xl text-4xl;
+    @apply text-4xl sm:text-5xl xl:text-6xl;
   }
 
   h2 {
-    @apply xl:text-5xl sm:text-4xl text-3xl;
+    @apply text-3xl sm:text-4xl xl:text-5xl;
   }
 
   h5 {
-    @apply sm:text-2xl text-xl tracking-wide;
+    @apply text-xl tracking-wide sm:text-2xl;
   }
 }

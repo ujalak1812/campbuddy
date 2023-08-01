@@ -22,19 +22,19 @@ const Header = () => {
     <>
       {showSmallNav && (
         <div
-          className="fixed w-full h-full bg-gradient left-0 top-0 animate-visible"
+          className="fixed left-0 top-0 h-full w-full animate-visible bg-gradient"
           onClick={handleMenuVisibility}
         />
       )}
-      <header className="2xl:container py-4 px-6 relative z-1">
-        <nav className="flex justify-between items-center">
+      <header className="relative z-1 px-6 py-4 2xl:container">
+        <nav className="flex items-center justify-between">
           <Logo />
           <ul
             className={`${
               showSmallNav
-                ? "block fixed w-11/12 left-2/4 -translate-x-2/4 top-24 bg-white rounded-xl text-center py-4 "
+                ? "fixed left-2/4 top-24 block w-11/12 -translate-x-2/4 rounded-xl bg-white py-4 text-center "
                 : "hidden"
-            } md:flex items-center`}
+            } items-center md:flex`}
           >
             {navData.map((navItem) => (
               <li key={navItem.id}>
@@ -43,8 +43,8 @@ const Header = () => {
                     url={navItem.url}
                     classes={`inline-block ${
                       showSmallNav
-                        ? "text-dark-green border-dark-green hover:bg-h-green w-11/12 sm:max-w-fit mx-auto my-2"
-                        : "ml-4 text-white border-white hover:bg-h-white"
+                        ? "hover:bg-h-green mx-auto my-2 w-11/12 border-dark-green text-dark-green sm:max-w-fit"
+                        : "ml-4 border-white text-white hover:bg-h-white"
                     }`}
                   >
                     {navItem.text}
@@ -52,8 +52,8 @@ const Header = () => {
                 ) : (
                   <a
                     href={navItem.url}
-                    className={`py-2 lg:px-6 lg:ml-4 px-5 block ${
-                      showSmallNav ? "text-dark-green my-2" : "text-white ml-3"
+                    className={`block px-5 py-2 lg:ml-4 lg:px-6 ${
+                      showSmallNav ? "my-2 text-dark-green" : "ml-3 text-white"
                     }`}
                   >
                     {navItem.text}
@@ -63,7 +63,7 @@ const Header = () => {
             ))}
           </ul>
           <button
-            className="md:hidden text-white text-sm"
+            className="text-sm text-white md:hidden"
             onClick={handleMenuVisibility}
           >
             {showSmallNav ? "CLOSE" : "MENU"}

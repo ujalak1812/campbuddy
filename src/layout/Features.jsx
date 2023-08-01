@@ -9,10 +9,9 @@ const Features = () => {
     <Section
       heading="Unleash your Camping Adventure"
       classes="bg-grayish-white pr-0"
-      headingClasses="px-6"
     >
-      <div className="flex flex-col-reverse lg:flex-row items-end xl:items-center justify-between">
-        <div className="px-6 basis-2/4 flex flex-wrap justify-center gap-14">
+      <div className="flex flex-col-reverse items-end justify-between lg:flex-row xl:items-center">
+        <div className="flex basis-2/4 flex-wrap justify-center gap-14 px-6">
           {features.map((feature) => (
             <Feature
               key={feature.id}
@@ -22,9 +21,8 @@ const Features = () => {
             />
           ))}
         </div>
-        <div className="pl-6 sm:pl-0 pb-14 lg:pb-0 ">
-          {/* <img src={FeaturesImage} alt="" /> */}
-          <ImageCircle image={FeaturesImage} imgClasses="max-w-562" />
+        <div className="pb-14 sm:pl-0 lg:pb-0 ">
+          <ImageCircle image={FeaturesImage} classes="max-w-562" />
         </div>
       </div>
     </Section>

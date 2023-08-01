@@ -1,15 +1,15 @@
 const ImageCircle = (props) => {
-  const { image, imgClasses } = props;
+  const { image, classes } = props;
 
   return (
-    <div className="relative -mr-9 ml-auto w-11/12 sm:w-auto">
+    <div className="relative -mr-12 ml-auto w-11/12 sm:w-auto">
       <div
-        className={`rounded-full overflow-hidden relative z-2 aspect-square ${imgClasses}`}
+        className={`relative z-2 aspect-square overflow-hidden rounded-full ${classes}`}
       >
         <img src={image} alt="" className="w-full" />
       </div>
-      <div className="w-[26.5%] aspect-square bg-dark-green rounded-full absolute bottom-0 z-1 -left-5"></div>
-      <div className="w-[9%] aspect-square bg-brown rounded-full absolute z-1 bottom-[18%] -left-[15%] sm:-left-[12%]"></div>
+      <div className="absolute -left-5 bottom-0 z-1 aspect-square w-[26.5%] rounded-full bg-dark-green"></div>
+      <div className="absolute -left-[15%] bottom-[18%] z-1 aspect-square w-[9%] rounded-full bg-brown sm:-left-[12%]"></div>
     </div>
   );
 };
