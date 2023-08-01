@@ -13,7 +13,7 @@ const CampgroundCard = (props) => {
           brownCircle: "bottom-[20%]",
         }}
       />
-      <h5 className="mt-8">{campgroundName}</h5>
+      <h5 className="mt-8 text-dark-green">{campgroundName}</h5>
       <p className="text-gold-green">{location}</p>
     </div>
   );
