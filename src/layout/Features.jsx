@@ -1,5 +1,6 @@
 import Section from "layout/Section";
 import Feature from "components/Feature";
+import ImageCircle from "components/ImageCircle";
 import features from "data/features";
 import FeaturesImage from "assets/features.png";
 
@@ -21,8 +22,9 @@ const Features = () => {
             />
           ))}
         </div>
-        <div className="pl-6 sm:pl-0 pb-14 lg:pb-0">
-          <img src={FeaturesImage} alt="" />
+        <div className="pl-6 sm:pl-0 pb-14 lg:pb-0 ">
+          {/* <img src={FeaturesImage} alt="" /> */}
+          <ImageCircle image={FeaturesImage} imgClasses="max-w-562" />
         </div>
       </div>
     </Section>

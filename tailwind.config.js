@@ -41,6 +41,9 @@ export default {
       animation: {
         visible: "visible 0.3s ease-in-out",
       },
+      maxWidth: {
+        562: "562px",
+      },
     },
   },
   plugins: [],
