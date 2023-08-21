@@ -24,4 +24,17 @@
   h5 {
     @apply text-xl tracking-wide sm:text-2xl;
   }
+
+  .slick-dots {
+    position: unset;
+    @apply py-3
+  }
+
+  .slick-dots li button::before {
+    @apply text-xs
+  }
+
+  .slick-dots li.slick-active button::before {
+    @apply text-dark-green text-xs
+  }
 }
