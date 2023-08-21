@@ -4,11 +4,11 @@ const CampgroundCard = (props) => {
   const { image, campgroundName, location } = props;
 
   return (
-    <div className="w-full overflow-hidden rounded-xl border border-solid border-light-green bg-grayish-white p-5 sm:max-w-sm">
+    <div className="w-full overflow-hidden rounded-xl border border-solid border-light-green bg-grayish-white p-5 sm:max-w-sm sm:mx-6">
       <ImageCircle
         image={image}
         classes={{
-          container: "-mr-16 -mt-16 w-11/12",
+          container: "-mr-16 -mt-16 w-full",
           img: "",
           brownCircle: "bottom-[20%]",
         }}
