@@ -21,10 +21,10 @@ const PopularCampgrounds = () => {
           slidesToShow: 1,
           slidesToScroll: 1,
           variableWidth: false,
-          centerMode: false
-        }
-      }
-    ]
+          centerMode: false,
+        },
+      },
+    ],
   };
 
   return (

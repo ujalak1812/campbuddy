@@ -27,14 +27,14 @@
 
   .slick-dots {
     position: unset;
-    @apply py-3
+    @apply py-3;
   }
 
   .slick-dots li button::before {
-    @apply text-xs
+    @apply text-xs;
   }
 
   .slick-dots li.slick-active button::before {
-    @apply text-dark-green text-xs
+    @apply text-xs text-dark-green;
   }
 }
