@@ -12,7 +12,7 @@ const Hero = () => {
         </p>
         <Button
           url="#"
-          classes="inline-block w-11/12 hover:bg-h-white sm:max-w-fit"
+          classes="inline-block w-11/12 py-2 hover:bg-h-white sm:max-w-fit sm:py-3"
         >
           Start Exploring
         </Button>

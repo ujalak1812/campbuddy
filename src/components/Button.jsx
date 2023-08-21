@@ -4,7 +4,7 @@ const Button = (props) => {
   return (
     <a
       href={url}
-      className={`${classes} rounded-full border border-solid px-6 py-2`}
+      className={`${classes} cursor-pointer rounded-full border border-solid px-6 text-center`}
     >
       {children}
     </a>

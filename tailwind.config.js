@@ -11,7 +11,7 @@ export default {
     },
     colors: {
       "dark-green": "#253A14",
-      "h-dark-green": "rgba(255, 255, 255, 0.3)",
+      "h-dark-green": "rgba(37, 58, 20, 0.3)",
       "gold-green": "#877936",
       "light-green": "#D3D8D0",
       "grayish-white": "#F1F2F4",

@@ -28,7 +28,12 @@ const PopularCampgrounds = () => {
   };
 
   return (
-    <Section heading="Featured Campgrounds" classes="bg-light-green">
+    <Section
+      heading="Featured Campgrounds"
+      classes="bg-light-green"
+      hasCTA={true}
+      buttonText="See all Campgrounds"
+    >
       <Slider {...settings}>
         <CampgroundCard
           image={FeaturesImage}

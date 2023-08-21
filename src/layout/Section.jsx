@@ -13,12 +13,19 @@ const Section = (props) => {
 
   return (
     <section className={`${classes} py-20 lg:py-24 xl:py-28`}>
-      <div className="overflow-hidden px-6 2xl:container">
+      <div className="overflow-x-hidden px-6 2xl:container">
         <h2 className="xl:mb-20` mb-14 text-center text-dark-green lg:mb-16">
           {heading}
         </h2>
         {children}
-        {hasCTA && <Button url={buttonUrl}>{buttonText}</Button>}
+        {hasCTA && (
+          <Button
+            url={buttonUrl}
+            classes="mx-auto my-12 block w-11/12 py-2 hover:bg-dark-green hover:text-white sm:max-w-fit sm:py-3"
+          >
+            {buttonText}
+          </Button>
+        )}
       </div>
     </section>
   );

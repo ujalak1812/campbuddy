@@ -41,7 +41,7 @@ const Header = () => {
                 {navItem.text === "Sign Up" ? (
                   <Button
                     url={navItem.url}
-                    classes={`inline-block ${
+                    classes={`inline-block py-2 ${
                       showSmallNav
                         ? "hover:bg-h-green mx-auto my-2 w-11/12 border-dark-green text-dark-green sm:max-w-fit"
                         : "ml-4 border-white text-white hover:bg-h-white"
