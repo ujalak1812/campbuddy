@@ -1,4 +1,4 @@
-import Section from "layout/Section";
+import Section from "modules/Section";
 import CampgroundCard from "components/CampgroundCard";
 import FeaturesImage from "assets/features.png";
 import Slider from "react-slick";
@@ -10,7 +10,7 @@ const PopularCampgrounds = () => {
     autoplaySpeed: 5000,
     dots: true,
     infinite: true,
-    speed: 500,
+    speed: 1000,
     centerMode: true,
     variableWidth: true,
     dotsClass: "slick-dots",

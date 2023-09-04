@@ -1,9 +1,9 @@
-import Header from "layout/Header";
+import Header from "modules/Header";
 import Button from "components/Button";
 
 const Hero = () => {
   return (
-    <section className="bg-hero bg-cover bg-fixed bg-left-bottom bg-no-repeat">
+    <section className="bg-hero bg-cover bg-left-bottom bg-no-repeat">
       <Header />
       <div className="px-6 py-52 text-center text-white 2xl:container sm:py-60 xl:py-72">
         <h1 className="mb-6">Discover the best Campgrounds</h1>

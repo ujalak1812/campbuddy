@@ -1,15 +1,9 @@
-import Hero from "modules/Hero";
-import Features from "modules/Features";
-import PopularCampgrounds from "modules/PopularCampgrounds";
-import Footer from "layout/Footer";
+import Homepage from "pages/Homepage";
 
 const App = () => {
   return (
     <>
-      <Hero />
-      <Features />
-      <PopularCampgrounds />
-      <Footer />
+      <Homepage />
     </>
   );
 };

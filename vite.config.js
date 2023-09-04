@@ -11,8 +11,9 @@ export default defineConfig({
       assets: "/src/assets",
       components: "/src/components",
       data: "/src/data",
-      layout: "/src/layout",
-      modules: "/src/modules"
+      layouts: "/src/layouts",
+      modules: "/src/modules",
+      pages: "/src/pages",
     },
   },
 });

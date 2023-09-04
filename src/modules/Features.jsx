@@ -1,4 +1,4 @@
-import Section from "layout/Section";
+import Section from "modules/Section";
 import Feature from "components/Feature";
 import ImageCircle from "components/ImageCircle";
 import features from "data/features";
