@@ -11,7 +11,7 @@ export default {
     },
     colors: {
       "dark-green": "#253A14",
-      "h-dark-green": "rgba(37, 58, 20, 0.3)",
+      "h-dark-green": "rgba(37, 58, 20, 0.15)",
       "gold-green": "#877936",
       "light-green": "#D3D8D0",
       "grayish-white": "#F1F2F4",
@@ -23,6 +23,7 @@ export default {
       hero: "url('assets/hero-bg.png')",
       gradient:
         "linear-gradient(0deg, rgba(37, 58, 20, 0.6) 0%, rgba(37, 58, 20, 0.00) 100%)",
+      auth: "url('assets/auth-bg.jpg')",
     },
     extend: {
       screens: {
