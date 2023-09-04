@@ -7,17 +7,17 @@ const navigation = [
   {
     id: "campgrounds",
     text: "Campgrounds",
-    url: "#",
+    url: "/",
   },
   {
     id: "login",
     text: "Login",
-    url: "#",
+    url: "/login",
   },
   {
     id: "sign-up",
     text: "Sign Up",
-    url: "#",
+    url: "/signup",
   },
 ];
 

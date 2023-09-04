@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 import navData from "data/navigation";
 import Button from "components/Button";
 import { ReactComponent as Logo } from "assets/logo.svg";
@@ -50,14 +51,14 @@ const Header = () => {
                     {navItem.text}
                   </Button>
                 ) : (
-                  <a
-                    href={navItem.url}
+                  <Link
+                    to={navItem.url}
                     className={`block px-5 py-2 lg:ml-4 lg:px-6 ${
                       showSmallNav ? "my-2 text-dark-green" : "ml-3 text-white"
                     }`}
                   >
                     {navItem.text}
-                  </a>
+                  </Link>
                 )}
               </li>
             ))}
