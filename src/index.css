@@ -9,6 +9,7 @@
 
   h1,
   h2,
+  h3,
   h5 {
     @apply font-serif font-bold;
   }
@@ -19,6 +20,10 @@
 
   h2 {
     @apply text-3xl sm:text-4xl xl:text-5xl;
+  }
+
+  h3 {
+    @apply text-2xl sm:text-3xl xl:text-4xl;
   }
 
   h5 {
@@ -36,5 +41,31 @@
 
   .slick-dots li.slick-active button::before {
     @apply text-xs text-dark-green;
+  }
+
+  .auth-form {
+    @apply w-full max-w-sm pb-8;
+  }
+
+  .auth-form label {
+    @apply mb-1 block space-x-2 text-sm font-bold tracking-wider text-dark-green;
+  }
+
+  .auth-form fieldset {
+    @apply mb-6;
+  }
+
+  .auth-form input[type="email"],
+  .auth-form input[type="password"] {
+    @apply w-full appearance-none rounded-full border border-gold-green px-5 py-3 leading-tight text-dark-green focus:border-dark-green focus-visible:border-0;
+  }
+
+  .auth-form input[type="email"]:focus-visible,
+  .auth-form input[type="password"]:focus-visible {
+    @apply border border-dark-green outline-none;
+  }
+
+  .auth-form input[type="submit"] {
+    @apply mt-2 w-full cursor-pointer rounded-full border border-dark-green bg-dark-green px-4 py-3 leading-tight text-white focus:outline-none;
   }
 }

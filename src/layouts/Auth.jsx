@@ -1,12 +1,16 @@
+import { ReactComponent as Logo } from "assets/logo-dark.svg";
+import { Link } from "react-router-dom";
+
 const Auth = ({ children }) => {
   return (
-    <div className="flex min-h-screen">
-      <div className="flex w-full items-center justify-center px-6 2xl:container xl:w-1/2 xl:bg-grayish-white">
+    <div className="flex min-h-screen bg-auth bg-cover bg-right bg-no-repeat xl:bg-left">
+      <div className="relative flex w-full flex-col items-center justify-center  bg-overlay-white px-6 2xl:container xl:w-1/2">
+        <Link to="/">
+          <Logo className="absolute left-6 top-4" />
+        </Link>
         {children}
       </div>
-      <div className="relative hidden w-1/2 bg-auth bg-cover bg-no-repeat xl:block">
-        <div className="absolute left-0 top-0 h-full w-full bg-h-dark-green" />
-      </div>
+      <div className="relative hidden w-1/2   xl:block"></div>
     </div>
   );
 };

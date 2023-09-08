@@ -18,6 +18,7 @@ export default {
       brown: "#5C4A3F",
       white: "#FFFFFF",
       "h-white": "rgba(255, 255, 255, 0.25)",
+      "overlay-white": "rgba(241, 242, 244, 0.85)",
     },
     backgroundImage: {
       hero: "url('assets/hero-bg.png')",
