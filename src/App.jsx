@@ -3,19 +3,31 @@ import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import Homepage from "pages/Homepage";
 import Login from "pages/Login";
 import Signup from "pages/Signup";
+import ResetPassword from "pages/ResetPassword";
+
+import {
+  BASE_URL,
+  LOGIN,
+  SIGNUP,
+  RESET_PASSWORD,
+} from "constants/UrlConstants.js";
 
 const router = createBrowserRouter([
   {
-    path: "/",
+    path: `${BASE_URL}`,
     element: <Homepage />,
   },
   {
-    path: "login",
+    path: `${LOGIN}`,
     element: <Login />,
   },
   {
-    path: "signup",
+    path: `${SIGNUP}`,
     element: <Signup />,
+  },
+  {
+    path: `${RESET_PASSWORD}`,
+    element: <ResetPassword />,
   },
 ]);
 

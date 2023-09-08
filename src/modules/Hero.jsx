@@ -1,5 +1,6 @@
 import Header from "modules/Header";
 import Button from "components/Button";
+import { LOGIN } from "constants/UrlConstants.js";
 
 const Hero = () => {
   return (
@@ -11,7 +12,7 @@ const Hero = () => {
           Find and review your favourite campgrounds in USA National Parks
         </p>
         <Button
-          url="#"
+          url={`${LOGIN}`}
           classes="inline-block w-11/12 py-2 hover:bg-h-white sm:max-w-fit sm:py-3"
         >
           Start Exploring

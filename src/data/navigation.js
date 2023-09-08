@@ -1,23 +1,25 @@
+import { BASE_URL, LOGIN, SIGNUP, CAMPGROUNDS } from "constants/UrlConstants";
+
 const navigation = [
   {
     id: "home",
     text: "Home",
-    url: "/",
+    url: `${BASE_URL}`,
   },
   {
     id: "campgrounds",
     text: "Campgrounds",
-    url: "/",
+    url: `${CAMPGROUNDS}`,
   },
   {
     id: "login",
     text: "Login",
-    url: "/login",
+    url: `${LOGIN}`,
   },
   {
     id: "sign-up",
     text: "Sign Up",
-    url: "/signup",
+    url: `${SIGNUP}`,
   },
 ];
 
