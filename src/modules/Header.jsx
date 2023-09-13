@@ -3,8 +3,15 @@ import { Link } from "react-router-dom";
 import navData from "data/navigation";
 import Button from "components/Button";
 import { ReactComponent as Logo } from "assets/logo.svg";
+import { ReactComponent as LogoDark } from "assets/logo-dark.svg";
 
-const Header = () => {
+const Header = ({ background }) => {
+  const classes = {
+    // header: {
+    //   transparent:
+    // }
+  };
+
   const [showSmallNav, setShowSmallNav] = useState(false);
 
   const handleMenuVisibility = () => {
@@ -29,7 +36,7 @@ const Header = () => {
       )}
       <header className="relative z-1 px-6 py-4 2xl:container">
         <nav className="flex items-center justify-between">
-          <Logo />
+          {background === "transparent" ? <Logo /> : <LogoDark />}
           <ul
             className={`${
               showSmallNav
@@ -45,7 +52,11 @@ const Header = () => {
                     classes={`inline-block py-2 ${
                       showSmallNav
                         ? "hover:bg-h-green mx-auto my-2 w-11/12 border-dark-green text-dark-green sm:max-w-fit"
-                        : "ml-4 border-white text-white hover:bg-h-white"
+                        : `ml-4 ${
+                            background === "transparent"
+                              ? "border-white text-white hover:bg-h-white"
+                              : "border-dark-green text-dark-green hover:bg-dark-green hover:text-white"
+                          }`
                     }`}
                   >
                     {navItem.text}
@@ -53,8 +64,14 @@ const Header = () => {
                 ) : (
                   <Link
                     to={navItem.url}
-                    className={`block px-5 py-2 lg:ml-4 lg:px-6 ${
-                      showSmallNav ? "my-2 text-dark-green" : "ml-3 text-white"
+                    className={`block px-5 py-2 transition-all hover:font-bold hover:tracking-wide lg:ml-4 lg:px-6 ${
+                      showSmallNav
+                        ? "my-2 text-dark-green"
+                        : `ml-3 ${
+                            background === "transparent"
+                              ? "text-white"
+                              : "text-dark-green"
+                          }`
                     }`}
                   >
                     {navItem.text}
@@ -64,7 +81,9 @@ const Header = () => {
             ))}
           </ul>
           <button
-            className="text-sm text-white md:hidden"
+            className={`text-sm md:hidden ${
+              background === "transparent" ? "text-white" : "text-dark-green"
+            }`}
             onClick={handleMenuVisibility}
           >
             {showSmallNav ? "CLOSE" : "MENU"}

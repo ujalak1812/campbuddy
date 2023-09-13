@@ -4,12 +4,14 @@ import Homepage from "pages/Homepage";
 import Login from "pages/Login";
 import Signup from "pages/Signup";
 import ResetPassword from "pages/ResetPassword";
+import Campgrounds from "pages/Campgrounds";
 
 import {
   BASE_URL,
   LOGIN,
   SIGNUP,
   RESET_PASSWORD,
+  CAMPGROUNDS,
 } from "constants/UrlConstants.js";
 
 const router = createBrowserRouter([
@@ -28,6 +30,10 @@ const router = createBrowserRouter([
   {
     path: `${RESET_PASSWORD}`,
     element: <ResetPassword />,
+  },
+  {
+    path: `${CAMPGROUNDS}`,
+    element: <Campgrounds />,
   },
 ]);
 

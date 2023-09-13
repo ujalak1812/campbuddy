@@ -6,7 +6,7 @@ const Hero = () => {
   return (
     <section className="relative bg-hero bg-cover bg-fixed bg-left-top bg-no-repeat">
       <div className="absolute left-0 top-0 h-full w-full bg-h-dark-green"></div>
-      <Header />
+      <Header background="transparent" />
       <div className="relative z-1 px-6 py-52 text-center text-white 2xl:container sm:py-60 xl:py-72">
         <h1 className="mb-6">Discover the best Campgrounds</h1>
         <p className="mx-auto mb-6 sm:w-3/5">
