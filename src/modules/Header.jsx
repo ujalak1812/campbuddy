@@ -33,7 +33,7 @@ const Header = () => {
           <ul
             className={`${
               showSmallNav
-                ? "rounded-full-xl fixed left-2/4 top-24 block w-11/12 -translate-x-2/4 bg-white py-4 text-center "
+                ? "fixed left-2/4 top-24 block w-11/12 -translate-x-2/4 rounded-xl bg-white py-4 text-center "
                 : "hidden"
             } items-center md:flex`}
           >
