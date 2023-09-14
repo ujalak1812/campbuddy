@@ -5,6 +5,7 @@ import Login from "pages/Login";
 import Signup from "pages/Signup";
 import ResetPassword from "pages/ResetPassword";
 import Campgrounds from "pages/Campgrounds";
+import CampgroundDetail from "pages/CampgroundDetail";
 
 import {
   BASE_URL,
@@ -34,6 +35,10 @@ const router = createBrowserRouter([
   {
     path: `${CAMPGROUNDS}`,
     element: <Campgrounds />,
+  },
+  {
+    path: `${CAMPGROUNDS}/:id`,
+    element: <CampgroundDetail />,
   },
 ]);
 

@@ -34,7 +34,7 @@ const Header = ({ background }) => {
           onClick={handleMenuVisibility}
         />
       )}
-      <header className="relative z-1 px-6 py-4 2xl:container">
+      <header className="relative z-2 px-6 py-4 2xl:container">
         <nav className="flex items-center justify-between">
           {background === "transparent" ? <Logo /> : <LogoDark />}
           <ul

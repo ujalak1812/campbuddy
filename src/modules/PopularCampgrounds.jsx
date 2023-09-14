@@ -2,6 +2,7 @@ import Section from "modules/Section";
 import CampgroundCard from "components/CampgroundCard";
 import FeaturesImage from "assets/features.png";
 import Slider from "react-slick";
+import campgrounds from "data/campgrounds";
 
 const PopularCampgrounds = () => {
   const settings = {
@@ -35,31 +36,14 @@ const PopularCampgrounds = () => {
       buttonText="See all Campgrounds"
     >
       <Slider {...settings}>
-        <CampgroundCard
-          image={FeaturesImage}
-          campgroundName="Wonder Lake"
-          location="Denali National Park, Alaska"
-        />
-        <CampgroundCard
-          image={FeaturesImage}
-          campgroundName="Wonder Lake 1"
-          location="Denali National Park, Alaska"
-        />
-        <CampgroundCard
-          image={FeaturesImage}
-          campgroundName="Wonder Lake 2"
-          location="Denali National Park, Alaska"
-        />
-        <CampgroundCard
-          image={FeaturesImage}
-          campgroundName="Wonder Lake 3"
-          location="Denali National Park, Alaska"
-        />
-        <CampgroundCard
-          image={FeaturesImage}
-          campgroundName="Wonder Lake 4"
-          location="Denali National Park, Alaska"
-        />
+        {campgrounds.map((campground) => (
+          <CampgroundCard
+            id={campground.id}
+            image={FeaturesImage}
+            campgroundName={campground.name}
+            location="Denali National Park, Alaska"
+          />
+        ))}
       </Slider>
     </Section>
   );

@@ -30,6 +30,7 @@
     @apply text-xl tracking-wide sm:text-2xl;
   }
 
+  /* slick carousel */
   .slick-dots {
     position: unset;
     @apply py-3;
@@ -43,6 +44,12 @@
     @apply text-xs text-dark-green;
   }
 
+  /* campground cards */
+  .campground-card:hover h5 {
+    @apply underline;
+  }
+
+  /* login, signup */
   .auth-form {
     @apply w-full max-w-sm pb-8;
   }
@@ -68,4 +75,9 @@
   .auth-form input[type="submit"] {
     @apply mt-2 w-full cursor-pointer rounded-full border border-dark-green bg-dark-green px-4 py-3 leading-tight text-white focus:outline-none;
   }
+}
+
+.slick-list {
+  padding-top: 12px !important;
+  padding-bottom: 12px !important;
 }

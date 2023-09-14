@@ -1,10 +1,15 @@
+import { Link } from "react-router-dom";
 import ImageCircle from "components/ImageCircle";
+import { CAMPGROUNDS } from "constants/UrlConstants.js";
 
 const CampgroundCard = (props) => {
-  const { image, campgroundName, location } = props;
+  const { image, campgroundName, location, id } = props;
 
   return (
-    <div className="w-full overflow-hidden rounded-xl border border-solid border-light-green bg-grayish-white p-5 sm:mx-6 sm:max-w-sm">
+    <Link
+      to={`${CAMPGROUNDS}/${id}`}
+      className="campground-card block w-full overflow-hidden rounded-xl border border-solid border-light-green bg-grayish-white p-5  transition-transform hover:scale-105 sm:mx-6 sm:max-w-sm"
+    >
       <ImageCircle
         image={image}
         classes={{
@@ -15,7 +20,7 @@ const CampgroundCard = (props) => {
       />
       <h5 className="mt-8 text-dark-green">{campgroundName}</h5>
       <p className="text-gold-green">{location}</p>
-    </div>
+    </Link>
   );
 };
 
