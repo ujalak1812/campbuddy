@@ -6,12 +6,6 @@ import { ReactComponent as Logo } from "assets/logo.svg";
 import { ReactComponent as LogoDark } from "assets/logo-dark.svg";
 
 const Header = ({ background }) => {
-  const classes = {
-    // header: {
-    //   transparent:
-    // }
-  };
-
   const [showSmallNav, setShowSmallNav] = useState(false);
 
   const handleMenuVisibility = () => {
@@ -30,13 +24,15 @@ const Header = ({ background }) => {
     <>
       {showSmallNav && (
         <div
-          className="fixed left-0 top-0 h-full w-full animate-visible bg-gradient"
+          className="fixed left-0 top-0 z-2 h-full w-full animate-visible bg-overlay-gradient"
           onClick={handleMenuVisibility}
         />
       )}
       <header className="relative z-2 px-6 py-4 2xl:container">
         <nav className="flex items-center justify-between">
-          {background === "transparent" ? <Logo /> : <LogoDark />}
+          <Link to={`${BASE_URL}`}>
+            {background === "transparent" ? <Logo /> : <LogoDark />}
+          </Link>
           <ul
             className={`${
               showSmallNav

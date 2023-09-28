@@ -8,7 +8,10 @@ const Features = () => {
   return (
     <Section
       heading="Unleash your Camping Adventure"
-      classes="bg-grayish-white"
+      classes={{
+        section: "bg-faded-green",
+        container: "overflow-x-hidden",
+      }}
     >
       <div className="flex flex-col-reverse items-end justify-between lg:flex-row xl:items-center">
         <div className="flex basis-2/4 flex-wrap justify-center gap-14 px-6">

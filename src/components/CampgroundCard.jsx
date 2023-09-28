@@ -8,7 +8,7 @@ const CampgroundCard = (props) => {
   return (
     <Link
       to={`${CAMPGROUNDS}/${id}`}
-      className="campground-card block w-full overflow-hidden rounded-xl border border-solid border-light-green bg-grayish-white p-5  transition-transform hover:scale-105 sm:mx-6 sm:max-w-sm"
+      className="campground-card block w-full overflow-hidden rounded-xl border border-solid border-faded-green bg-white p-5  transition-transform hover:scale-105 sm:mx-6 sm:max-w-sm"
     >
       <ImageCircle
         image={image}

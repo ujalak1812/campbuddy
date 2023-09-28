@@ -11,7 +11,7 @@
   h2,
   h3,
   h5 {
-    @apply font-serif font-bold;
+    @apply font-serif font-semibold;
   }
 
   h1 {
@@ -55,7 +55,7 @@
   }
 
   .auth-form label {
-    @apply mb-1 block space-x-2 text-sm font-bold tracking-wider text-dark-green;
+    @apply mb-1 block space-x-2;
   }
 
   .auth-form fieldset {
@@ -64,7 +64,7 @@
 
   .auth-form input[type="email"],
   .auth-form input[type="password"] {
-    @apply w-full appearance-none rounded-full border border-gold-green px-5 py-3 leading-tight text-dark-green focus:border-dark-green focus-visible:border-0;
+    @apply w-full appearance-none rounded-full border border-gold-green px-5 py-3 leading-tight focus:border-dark-green focus-visible:border-0;
   }
 
   .auth-form input[type="email"]:focus-visible,

@@ -26,7 +26,7 @@ const LoginForm = () => {
             <label htmlFor="password">Password:</label>
             <Link
               to={`${RESET_PASSWORD}`}
-              className="mb-1 inline-block text-sm font-bold tracking-wide text-dark-green underline"
+              className="mb-1 inline-block text-dark-green underline"
               href="#"
             >
               Forgot Password?
@@ -43,7 +43,7 @@ const LoginForm = () => {
       </form>
       <p className="text-center">
         Don't have an account?{" "}
-        <Link to={`${SIGNUP}`} className="font-bold text-dark-green underline">
+        <Link to={`${SIGNUP}`} className="text-dark-green underline">
           Create Account
         </Link>
       </p>
