@@ -4,6 +4,7 @@ import navData from "data/navigation";
 import Button from "components/Button";
 import { ReactComponent as Logo } from "assets/logo.svg";
 import { ReactComponent as LogoDark } from "assets/logo-dark.svg";
+import { BASE_URL } from "constants/UrlConstants";
 
 const Header = ({ background }) => {
   const [showSmallNav, setShowSmallNav] = useState(false);
