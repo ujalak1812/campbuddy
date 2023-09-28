@@ -25,7 +25,7 @@ export default {
       "overlay-gradient":
         "linear-gradient(0deg, rgba(37, 58, 20, 0.6) 0%, rgba(37, 58, 20, 0.00) 100%)",
       "card-gradient":
-        "linear-gradient(0deg, rgba(50, 80, 26, 1) 0%, rgba(50, 80, 26, 0.5) 50%, rgba(50, 80, 26, 0) 100%)",
+        "linear-gradient(0deg, rgba(50, 80, 26, 1) 0%, rgba(50, 80, 26, 0.3) 35%, rgba(50, 80, 26, 0) 100%)",
     },
     extend: {
       screens: {
@@ -49,7 +49,7 @@ export default {
         562: "562px",
       },
       boxShadow: {
-        lg: "rgba(81, 64, 53, 0.2) 0px 2px 4px 0px, rgba(81, 64, 53, 0.8) 0px 2px 16px 0px;",
+        lg: "0px 2px 4px 0px rgba(81, 64, 53, 0.2), 0px 2px 16px 0px rgba(81, 64, 53, 0.8)",
       },
     },
   },
