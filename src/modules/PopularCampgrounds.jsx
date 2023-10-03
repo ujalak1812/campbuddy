@@ -2,10 +2,12 @@ import { Link } from "react-router-dom";
 import { useSelector } from "react-redux";
 import { CAMPGROUNDS } from "constants/UrlConstants.js";
 import Section from "modules/Section";
+import { campgrounds } from "data/campgrounds";
+import { parks } from "data/parks";
 
 const PopularCampgrounds = () => {
-  const { campgrounds } = useSelector((state) => state.campgrounds);
-  const { parks } = useSelector((state) => state.parks);
+  // const { campgrounds } = useSelector((state) => state.campgrounds);
+  // const { parks } = useSelector((state) => state.parks);
 
   const constructGrid = () => {
     const campgroundsGrid = [];
@@ -42,7 +44,7 @@ const PopularCampgrounds = () => {
                 <div className="absolute bottom-0 left-0 z-3 w-full p-4">
                   <h5 className="text-white">{el.name}</h5>
                   <p className="text-white">
-                    {park !== undefined && park.fullName}
+                    {park !== undefined && `${park.fullName} (${park.states})`}
                   </p>
                 </div>
                 <div className="absolute left-0 top-0 z-2 h-full w-full bg-card-gradient" />

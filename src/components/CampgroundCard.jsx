@@ -3,15 +3,16 @@ import ImageCircle from "components/ImageCircle";
 import { CAMPGROUNDS } from "constants/UrlConstants.js";
 
 const CampgroundCard = (props) => {
-  const { image, campgroundName, location, id } = props;
+  const { image, alt, campgroundName, location, id } = props;
 
   return (
     <Link
       to={`${CAMPGROUNDS}/${id}`}
-      className="campground-card block w-full overflow-hidden rounded-xl border border-solid border-faded-green bg-white p-5  transition-transform hover:scale-105 sm:mx-6 sm:max-w-sm"
+      className="campground-card block w-full overflow-hidden rounded-xl bg-faded-green p-5  transition-transform hover:scale-105 sm:max-w-sm"
     >
       <ImageCircle
         image={image}
+        alt={alt}
         classes={{
           container: "-mr-16 -mt-16 w-full",
           img: "",

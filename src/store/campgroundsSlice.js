@@ -3,9 +3,20 @@ import { GET_CAMPGROUNDS } from "constants/UrlConstants";
 
 export const getCampgrounds = createAsyncThunk(
   "campgrounds/getCampgrounds",
-  async () => {
-    let response = await fetch(GET_CAMPGROUNDS);
-    let json = await response.json();
+  async (params) => {
+    let url = GET_CAMPGROUNDS.replace("{parkCode}", params.parkCode)
+      .replace("{stateCode}", params.stateCode)
+      .replace("{limit}", params.limit)
+      .replace("{start}", params.start);
+
+    if (params.query.length > 0) {
+      url = url.replace("{query}", params.query);
+    } else {
+      url = url.replace("&q={query}", "");
+    }
+
+    const response = await fetch(url);
+    const json = await response.json();
     return json.data;
   },
 );
