@@ -4,7 +4,7 @@ import { BASE_URL } from "constants/UrlConstants";
 
 const Auth = ({ children }) => {
   return (
-    <div className="flex min-h-screen bg-faded-green">
+    <div className="flex min-h-screen">
       <div className="relative flex w-full flex-col items-center  justify-center px-6 2xl:container xl:w-1/2">
         <Link to={`${BASE_URL}`}>
           <Logo className="absolute left-6 top-4" />

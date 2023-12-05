@@ -4,7 +4,7 @@ import { CAMPGROUNDS } from "constants/UrlConstants.js";
 
 const Hero = () => {
   return (
-    <div className="bg-faded-green p-2">
+    <div className="p-2">
       <section className="m-1. relative overflow-hidden rounded-xl bg-hero bg-cover bg-fixed bg-left-bottom bg-no-repeat">
         <div className="absolute left-0 top-0 h-full w-full bg-overlay-green"></div>
         <Header background="transparent" />

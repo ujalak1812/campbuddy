@@ -64,9 +64,6 @@ const PopularCampgrounds = () => {
       hasCTA={true}
       buttonText="See all Campgrounds"
       buttonUrl={`${CAMPGROUNDS}`}
-      classes={{
-        section: "bg-faded-green",
-      }}
     >
       <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
         {campgrounds.length > 0 && parks.length > 0 && constructGrid()}

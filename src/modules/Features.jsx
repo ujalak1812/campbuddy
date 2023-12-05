@@ -9,7 +9,7 @@ const Features = () => {
     <Section
       heading="Unleash your Camping Adventure"
       classes={{
-        section: "bg-faded-green",
+        section: "",
         container: "overflow-x-hidden",
       }}
     >
