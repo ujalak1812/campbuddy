@@ -1,13 +1,27 @@
 import { Link } from "react-router-dom";
-import { useSelector } from "react-redux";
+import { useEffect } from "react";
+import { useSelector, useDispatch } from "react-redux";
+import { getCampgrounds } from "store/campgroundsSlice";
+import { getParks } from "store/parksSlice";
 import { CAMPGROUNDS } from "constants/UrlConstants.js";
 import Section from "modules/Section";
-import { campgrounds } from "data/campgrounds";
-import { parks } from "data/parks";
 
 const PopularCampgrounds = () => {
-  // const { campgrounds } = useSelector((state) => state.campgrounds);
-  // const { parks } = useSelector((state) => state.parks);
+  const dispatch = useDispatch();
+  const { campgrounds } = useSelector((state) => state.campgrounds);
+  const { parks } = useSelector((state) => state.parks);
+
+  useEffect(() => {
+    dispatch(
+      getCampgrounds({
+        parkCode: "",
+        stateCode: "",
+        limit: 6,
+        start: 0,
+        query: "",
+      }),
+    );
+  }, []);
 
   const constructGrid = () => {
     const campgroundsGrid = [];
@@ -22,18 +36,19 @@ const PopularCampgrounds = () => {
 
     for (let j = 0; j < grids.length; j += 1) {
       campgroundsGrid.push(
-        <div className="grid gap-4" key={`grid-${j}`}>
+        <div className="gap-4 grid" key={`grid-${j}`}>
           {grids[j].map((el) => {
             const park = parks.find((park) => park.parkCode === el.parkCode);
 
             return (
               <Link
                 to={`${CAMPGROUNDS}/${el.id}`}
-                className="campground-card relative cursor-pointer overflow-hidden rounded-xl shadow-lg transition-shadow hover:shadow-none"
+                className="relative shadow-lg hover:shadow-none rounded-xl overflow-hidden transition-shadow cursor-pointer campground-card"
                 key={`item-${el.id}`}
+                // onClick={}
               >
                 <img
-                  className="h-full w-full object-cover"
+                  className="w-full h-full object-cover"
                   src={
                     el.images[0].altText.includes("Map" || "map") && parks
                       ? parks[0].images[0].url
@@ -41,13 +56,13 @@ const PopularCampgrounds = () => {
                   }
                   alt={el.images[0].altText}
                 />
-                <div className="absolute bottom-0 left-0 z-3 w-full p-4">
+                <div className="bottom-0 left-0 z-3 absolute p-4 w-full">
                   <h5 className="text-white">{el.name}</h5>
                   <p className="text-white">
                     {park !== undefined && `${park.fullName} (${park.states})`}
                   </p>
                 </div>
-                <div className="absolute left-0 top-0 z-2 h-full w-full bg-card-gradient" />
+                <div className="top-0 left-0 z-2 absolute bg-card-gradient w-full h-full" />
               </Link>
             );
           })}
@@ -65,7 +80,7 @@ const PopularCampgrounds = () => {
       buttonText="See all Campgrounds"
       buttonUrl={`${CAMPGROUNDS}`}
     >
-      <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
+      <div className="gap-4 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
         {campgrounds.length > 0 && parks.length > 0 && constructGrid()}
       </div>
     </Section>

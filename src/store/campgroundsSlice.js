@@ -1,10 +1,10 @@
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
-import { GET_CAMPGROUNDS } from "constants/UrlConstants";
+import { GET_ALL_CAMPGROUNDS } from "constants/UrlConstants";
 
 export const getCampgrounds = createAsyncThunk(
   "campgrounds/getCampgrounds",
   async (params) => {
-    let url = GET_CAMPGROUNDS.replace("{parkCode}", params.parkCode)
+    let url = GET_ALL_CAMPGROUNDS.replace("{parkCode}", params.parkCode)
       .replace("{stateCode}", params.stateCode)
       .replace("{limit}", params.limit)
       .replace("{start}", params.start);
