@@ -25,7 +25,6 @@ const Campgrounds = () => {
       <Header background="white" />
       <h3>{campgroundData.name}</h3>
       <p>{parkData.fullName}, {parkData.states}</p>
-      </div>
     </>
   );
 };
